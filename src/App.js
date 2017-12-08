@@ -6,7 +6,7 @@ import Login from './containers/Login'
 import { LOGOUT } from './actionTypes'
 
 class App extends Component {
-  render () {
+  render = () => {
     if (this.props.sessionReducer.session == null) {
       return (
         <Login />

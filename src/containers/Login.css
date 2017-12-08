@@ -1,0 +1,34 @@
+.Login{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+}
+
+.Login #screentitle{
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Login #username{
+    display: block;
+    position: relative;
+    top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Login #password{
+    display: block;
+    position: relative;
+    top: 120px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.Login #login{
+    display: block;
+    position: relative;
+    top: 140px;
+    margin-left: auto;
+    margin-right: auto;
+}
