@@ -5,23 +5,9 @@ import App from './App'
 import registerServiceWorker from './registerServiceWorker'
 import { createStore, combineReducers } from 'redux'
 import { Provider } from 'react-redux'
+import reducers from './Reducers'
 
-const appInitialState = {
-  session: null
-}
-
-const SessionReducer = (state = appInitialState , action) => {
-  switch (action.type) {
-    case 'login':
-      alert('login')
-      return Object.assign({}, {session: {username: action.username,password: action.password}})
-    case 'logout':
-      return Object.assign({}, {session: null})
-    default:
-      return state
-  }
-}
-const RootReducer = combineReducers({SessionReducer})
+const RootReducer = combineReducers(reducers)
 const store = createStore(RootReducer)
 
 ReactDOM.render(

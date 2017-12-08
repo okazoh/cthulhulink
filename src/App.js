@@ -26,6 +26,11 @@ class App extends Component {
         <p className='App-intro'>
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <input
+          type='button'
+          name='logout'
+          value='logout'
+          onClick={e => this.props.logout()} />
       </div>
     )
   }
@@ -38,7 +43,6 @@ var mapStateToProps = (state) => {
 var mapDispatchToProps = (dispatch) => {
   return {
     login: (username, password) => {
-      alert('test')
       dispatch({type: 'login',username: username, password: password})
     },
     logout: () => {
