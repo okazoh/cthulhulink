@@ -2,19 +2,14 @@ import React, { Component } from 'react'
 import logo from './logo.svg'
 import './App.css'
 import { connect } from 'react-redux'
+import Login from './containers/Login'
+import { LOGOUT } from './actionTypes'
 
 class App extends Component {
   render () {
-    if (this.props.SessionReducer.session == null) {
+    if (this.props.sessionReducer.session == null) {
       return (
-        <div className='App'>
-          <h1>ログイン処理</h1>
-          <input
-            type='button'
-            name='test'
-            value='test'
-            onClick={e => this.props.login('test', 'pass')} />
-        </div>
+        <Login />
       )
     }
     return (
@@ -42,11 +37,8 @@ var mapStateToProps = (state) => {
 
 var mapDispatchToProps = (dispatch) => {
   return {
-    login: (username, password) => {
-      dispatch({type: 'login',username: username, password: password})
-    },
     logout: () => {
-      dispatch({type: 'logout'})
+      dispatch({type: LOGOUT})
     }
   }
 }
