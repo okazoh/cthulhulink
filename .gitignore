@@ -1,0 +1,8 @@
+*.swp
+._*
+.DS_Store
+node_modules
+release
+.sass-cache
+.vscode
+package-lock.json
