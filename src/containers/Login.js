@@ -12,7 +12,7 @@ class Login extends Component {
   render = () => {
     return (
       <div className='Login'>
-        <div id="screentitle"><h1>Cthulhu.link</h1></div>
+        <div id="screentitle"><img src="images/logo.png" /></div>
         <input type="text" id="username" name="username" placeholder="ユーザー名" value={this.state.username} onChange={this.handleChange} />
         <input type="password" id="password" name="password" placeholder="パスワード" value={this.state.password} onChange={this.handleChange} />
         <input
@@ -33,6 +33,8 @@ class Login extends Component {
       case 'password':
         this.state.password = evt.target.value;
         break;
+      default:
+        break;
     }
 
     // 状態を更新
@@ -47,7 +49,7 @@ var mapStateToProps = (state) => {
 var mapDispatchToProps = (dispatch) => {
   return {
     login: (username, password) => {
-      dispatch({type: LOGIN,username: username, password: password})
+      dispatch({type: LOGIN, username: username, password: password})
     }
   }
 }
